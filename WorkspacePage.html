@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artify - Untitled</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SwiperJS CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <header class="workspace-header">
+        <input type="text" id="documentName" value="Untitled" class="document-name" />
+        <div class="tools">
+            <button id="addImageBtn" class="tool-btn">Add Image</button>
+            <button id="addTextBtn" class="tool-btn">Add Text</button>
+            <!-- Future Tools: <button id="addShapeBtn" class="tool-btn">Add Shape</button> -->
+        </div>
+        <!-- Optional: Add more tools or buttons on the right side -->
+    </header>
+
+    <main class="workspace-main">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Swiper slides (canvases) will be dynamically added here by script.js -->
+            </div>
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </main>
+
+    <!-- Thumbnail Bar -->
+    <div class="thumbnail-bar" id="thumbnailBar">
+        <div class="thumbnails" id="thumbnails">
+            <!-- Thumbnails will be dynamically added here -->
+        </div>
+        <button id="addCanvasThumbnailBtn" class="add-canvas-thumbnail-btn">+</button>
+    </div>
+
+    <!-- Modal for selecting canvas size -->
+    <div id="sizeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Select Canvas Size</h2>
+            <div class="size-options">
+                <button data-size="A4" class="size-btn">A4</button>
+                <button data-size="A3" class="size-btn">A3</button>
+                <button data-size="ar16x9-vertical" class="size-btn">16:9 Vertical</button>
+                <button data-size="ar16x9-horizontal" class="size-btn">16:9 Horizontal</button>
+                <button data-size="FullHD" class="size-btn">FullHD</button>
+                <!-- Add more sizes as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Zoom Controls -->
+    <div class="zoom-controls">
+        <button id="zoomInBtn" class="zoom-btn">+</button>
+        <button id="zoomOutBtn" class="zoom-btn">-</button>
+    </div>
+
+    <!-- SwiperJS JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
