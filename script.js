@@ -456,7 +456,6 @@ function selectElement(element) {
 // Function to deselect an element
 function deselectElement(element) {
     element.classList.remove('selected-element');
-    // Remove handles
     const handles = element.querySelectorAll('.move-handle, .resize-handle');
     handles.forEach(handle => handle.remove());
 }
